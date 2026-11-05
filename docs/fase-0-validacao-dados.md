@@ -2,7 +2,7 @@
 
 4 de Novembro de 2026 · @Zé Manel
 
-**Origem deste ficheiro:** exportação directa da revisão 72 do documento partilhado (versão 4.1 com as quatro alterações finais). Não existe outro número de versão.
+**Origem deste ficheiro:** a especificação publicada tem por base a exportação directa da revisão 72 do documento partilhado (versão 4.1, com as quatro alterações finais), incorporando as correcções documentais dos commits `e1b6732` e `46533e5`. Estas correcções não alteram os pedidos, as regras de medição, os limiares, a arquitectura nem o orçamento de 353 pedidos. Não se cria outro número de versão.
 
 ## Alterações da versão final (4.1)
 
