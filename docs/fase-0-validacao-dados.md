@@ -423,7 +423,7 @@ Oito pressupostos só se confirmam com as primeiras chamadas reais; cada um tem 
 
 - [x] Aplicar a regra de colaboração: cada assistente propõe e justifica a ferramenta a usar, pede ao outro que use as suas quando forem melhores, questiona as escolhas do outro, e os factos decisivos são verificados pelos dois de forma independente (Claude e ChatGPT)
 - [ ] Revisão final do ChatGPT no pull request do GitHub, confirmando que o documento publicado corresponde a esta versão (ChatGPT e utilizador)
-- [ ] Aprovação final dos limiares, antes do Dia 1 (utilizador)
+- [x] Aprovação final dos limiares, antes do Dia 1 (utilizador)
 - [ ] Criar conta de afiliado na Travelpayouts e obter o token (utilizador)
 - [ ] Criar conta na Ignav e obter a chave da API (utilizador)
 - [ ] Passar o documento aprovado para o repositório GitHub, num pull request revisto pelo ChatGPT; só depois criar as tabelas e as tarefas agendadas no Supabase (Claude)
