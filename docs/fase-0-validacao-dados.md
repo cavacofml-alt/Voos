@@ -8,6 +8,12 @@
 
 A versão 4.1 aplica as 9 correcções da quarta revisão, sem alterar a arquitectura, as fontes, os limiares nem o orçamento (353 pedidos). As notas A, B e C da v4 foram aceites pelo revisor; a nota B passa a aplicar-se também a C3. As versões anteriores estão no histórico.
 
+**Notas da v4** (aceites pelo revisor):
+
+- **Nota A:** uma cotação vista em dias diferentes pode cair em faixas de idade diferentes e conta uma vez em cada uma. Os resultados por faixa não são independentes, e o relatório assinala isso.
+- **Nota B:** a referência é sempre o directo mais barato da data, qualquer que seja o estado, e a comparação é classificada pelo estado desse itinerário. Nunca se troca um `unverified` mais barato por um `verified` mais caro. Na v4.1 aplica-se também a C3.
+- **Nota C:** a cobertura T1 conta só as datas com `actual = true`, o que torna a métrica mais exigente do que na v3. O limiar de 60 % mantém-se.
+
 | # | Correcção | Onde |
 | --- | --- | --- |
 | 1 | C2 exige companhia + número de voo + hora de partida; a equivalência entre `airline` (Travelpayouts) e `marketing_carrier_code` (Ignav) é testada com os primeiros dados recolhidos, sem pedidos extra; sem ela, a C2 é ambígua | O que se mede |
@@ -25,7 +31,7 @@ A versão 4.1 aplica as 9 correcções da quarta revisão, sem alterar a arquite
 - **Números de voo e horas normalizados antes de comparar.** Os números de voo são comparados sem zeros à esquerda. As horas são convertidas para UTC, porque a Travelpayouts devolve `departure_at` com fuso e a Ignav devolve `departure_time_utc`.
 - **A Ignav só devolve a companhia operadora por nome** (`operating_carrier_name`), não por código. Por isso a equivalência de companhias só se pode testar contra o código comercial.
 
-**Reutilização de resultados da Ignav.** Segundo a FAQ oficial, consultada pelo revisor, os resultados da pesquisa exacta e do calendário podem ser reutilizados até 30 minutos e mantêm o `observed_at` original, que pode ser nulo; o `ignav_id` não é um identificador estável de voo. Esta afirmação está verificada só pelo ChatGPT, sem confirmação independente do Claude, que não conseguiu abrir a FAQ (URL exacto por indicar pelo ChatGPT; não a tratar como facto confirmado pelos dois). As regras temporais já tratavam estes casos e a identificação de voos usa sempre os dados dos segmentos.
+**Reutilização de resultados da Ignav.** Segundo a FAQ oficial, consultada pelo revisor, os resultados da pesquisa exacta e do calendário podem ser reutilizados até 30 minutos e mantêm o `observed_at` original, que pode ser nulo; o `ignav_id` não é um identificador estável de voo. Esta afirmação está verificada pelo ChatGPT e pelo Claude (conversa web), de forma independente, na [FAQ da Ignav](https://ignav.com/docs/faq); o Claude da conversa web consultou-a a 5 de Novembro de 2026 e confirmou a reutilização até 30 minutos, que o `observed_at` mantém a hora original quando reutilizado (e pode ser nulo) e que o `ignav_id` não é um identificador estável de voo. As regras temporais já tratavam estes casos e a identificação de voos usa sempre os dados dos segmentos.
 
 **Alterações finais, após a revisão da 4.1** (sem pedidos, tabelas ou custos novos; orçamento de 353)
 
@@ -429,6 +435,7 @@ Oito pressupostos só se confirmam com as primeiras chamadas reais; cada um tem 
 - [Ignav — Cheapest Dates](https://ignav.com/docs/cheapest-dates)
 - [Ignav — One-Way Fares](https://ignav.com/docs/one-way)
 - [Ignav — Booking Links](https://ignav.com/docs/booking-links)
+- [Ignav — FAQ](https://ignav.com/docs/faq)
 - [Ignav — Preços](https://ignav.com/pricing)
 - [Ryanair — Termos de utilização (PT)](https://www.ryanair.com/pt/pt/lp/informacao-legal/termos-de-utilizacao)
 - [easyJet — Política de utilização aceitável (PT)](https://www.easyjet.com/pt/policy/acceptable-use)
