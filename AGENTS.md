@@ -18,9 +18,10 @@ Ferramenta pessoal para encontrar voos baratos para uma família de 2 adultos + 
 
 1. Nenhuma alteração vai directamente para `main`. Tudo passa por pull request.
 2. Quem propõe nunca revê o próprio trabalho: o outro assistente faz a revisão no pull request.
-3. O merge só acontece com a aprovação dos dois assistentes registada no pull request **e** com a aprovação final do utilizador.
-4. Discordâncias ficam escritas no pull request, com os argumentos de cada lado. Quem decide é o utilizador; nunca se contornam.
-5. Cada decisão relevante é registada em `docs/DECISOES.md`, no mesmo pull request.
+3. Registam-se no pull request três etapas separadas: (a) a confirmação do autor de que o pull request está completo; (b) a aprovação do revisor, que é sempre o outro assistente; (c) a aprovação final do utilizador. Quem propõe nunca marca a etapa (b).
+4. O merge só acontece com as três etapas (a), (b) e (c) registadas no pull request.
+5. Discordâncias ficam escritas no pull request, com os argumentos de cada lado. Quem decide é o utilizador; nunca se contornam.
+6. Cada decisão relevante é registada em `docs/DECISOES.md`, no mesmo pull request.
 
 ## Crítica e verificação
 
@@ -41,12 +42,12 @@ Ferramenta pessoal para encontrar voos baratos para uma família de 2 adultos + 
 
 | Fonte | Regra |
 | --- | --- |
-| greatescape.co | Proibido: acesso automático (incluindo agentes que controlam o navegador), uso das APIs internas, cópia de conteúdo ou preços. Os termos do site exigem consentimento escrito |
+| `*.greatescape.co` (incluindo subdomínios, como `webdev.greatescape.co`) | Proibido, para todos os assistentes e agentes: acesso automático, navegação automatizada (incluindo agentes que controlam o navegador), scraping, uso das APIs internas e cópia não autorizada de conteúdo ou preços. Os termos do site exigem consentimento escrito. A revisão do site é manual, feita pelo utilizador |
 | Google Flights | Proibido o scraping, directo ou através de intermediários como a SerpApi |
 | easyJet | Sem qualquer automação; só confirmação manual |
 | Ryanair | Só confirmação manual na Fase 0. A ausência de uma proibição expressa para uso não comercial não é autorização geral para automatizar |
 | Hermes (API não oficial da Ryanair) | Não é dependência do projecto |
-| Travelpayouts, Ignav | Fontes aprovadas, dentro dos respectivos termos e limites |
+| Travelpayouts, Ignav | Aprovadas para os usos descritos na Fase 0, sujeitas à confirmação dos termos, quotas e preços vigentes. Condições: [Travelpayouts — Aviasales Data API](https://support.travelpayouts.com/hc/en-us/articles/203956163); Ignav: [Cheapest Dates](https://ignav.com/docs/cheapest-dates), [One-Way Fares](https://ignav.com/docs/one-way), [Booking Links](https://ignav.com/docs/booking-links) e [Preços](https://ignav.com/pricing). Ignav: 1.000 pedidos gratuitos e depois 2 USD por 1.000, segundo a página de preços (confirmado pelo ChatGPT; o Claude não conseguiu abrir `ignav.com` a partir da sua sessão). Limites da Travelpayouts: a confirmar no Dia 0 |
 
 ## Segredos
 

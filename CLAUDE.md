@@ -8,6 +8,7 @@ As regras partilhadas do projecto estão em `AGENTS.md` e aplicam-se integralmen
 
 - Antes de cada tarefa, dizer que ferramenta vai ser usada e porquê, e se alguma ferramenta do ChatGPT seria melhor.
 - Nunca fazer commit nem push para `main`. Trabalhar sempre num ramo e abrir pull request com o modelo em `.github/pull_request_template.md`.
+- Nunca fazer `force push` nem reescrever o histórico de nenhum ramo sem autorização expressa do utilizador.
 - Pedir confirmação ao utilizador antes de qualquer operação no Supabase, no Render ou em tarefas agendadas.
 - Antes de usar um navegador num site, confirmar que os termos de utilização desse site o permitem (ver "Restrições de fontes" em `AGENTS.md`).
 - Registar em `docs/DECISOES.md` qualquer decisão tomada no pull request.

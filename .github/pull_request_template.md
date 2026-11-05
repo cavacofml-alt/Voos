@@ -29,6 +29,6 @@
 
 ## Aprovações
 
-- [ ] Claude
-- [ ] ChatGPT
-- [ ] Utilizador (aprovação final)
+- [ ] (a) Autor: confirmo que o pull request está completo
+- [ ] (b) Revisor (o outro assistente): aprovo a revisão. Quem propõe nunca marca esta caixa
+- [ ] (c) Utilizador: aprovação final

@@ -1,6 +1,8 @@
 # Monitor de Voos — Fase 0: Validação de Dados
 
-Nov 4, 2026 · @Zé Manel
+4 de Novembro de 2026 · @Zé Manel
+
+**Origem deste ficheiro:** exportação directa da revisão 72 do documento partilhado (versão 4.1 com as quatro alterações finais). Não existe outro número de versão.
 
 ## Alterações da versão final (4.1)
 
@@ -23,7 +25,7 @@ A versão 4.1 aplica as 9 correcções da quarta revisão, sem alterar a arquite
 - **Números de voo e horas normalizados antes de comparar.** Os números de voo são comparados sem zeros à esquerda. As horas são convertidas para UTC, porque a Travelpayouts devolve `departure_at` com fuso e a Ignav devolve `departure_time_utc`.
 - **A Ignav só devolve a companhia operadora por nome** (`operating_carrier_name`), não por código. Por isso a equivalência de companhias só se pode testar contra o código comercial.
 
-**Reutilização de resultados da Ignav.** Segundo a FAQ oficial, consultada pelo revisor, os resultados da pesquisa exacta e do calendário podem ser reutilizados até 30 minutos e mantêm o `observed_at` original, que pode ser nulo; o `ignav_id` não é um identificador estável de voo. Não consegui abrir a FAQ a partir daqui. As regras temporais já tratavam estes casos e a identificação de voos usa sempre os dados dos segmentos.
+**Reutilização de resultados da Ignav.** Segundo a FAQ oficial, consultada pelo revisor, os resultados da pesquisa exacta e do calendário podem ser reutilizados até 30 minutos e mantêm o `observed_at` original, que pode ser nulo; o `ignav_id` não é um identificador estável de voo. Esta afirmação está verificada só pelo ChatGPT, sem confirmação independente do Claude, que não conseguiu abrir a FAQ (URL exacto por indicar pelo ChatGPT; não a tratar como facto confirmado pelos dois). As regras temporais já tratavam estes casos e a identificação de voos usa sempre os dados dos segmentos.
 
 **Alterações finais, após a revisão da 4.1** (sem pedidos, tabelas ou custos novos; orçamento de 353)
 
@@ -413,7 +415,7 @@ Oito pressupostos só se confirmam com as primeiras chamadas reais; cada um tem 
 
 **Próximos passos**
 
-- [ ] Aplicar a regra de colaboração: cada assistente propõe e justifica a ferramenta a usar, pede ao outro que use as suas quando forem melhores, questiona as escolhas do outro, e os factos decisivos são verificados pelos dois de forma independente (Claude e ChatGPT)
+- [x] Aplicar a regra de colaboração: cada assistente propõe e justifica a ferramenta a usar, pede ao outro que use as suas quando forem melhores, questiona as escolhas do outro, e os factos decisivos são verificados pelos dois de forma independente (Claude e ChatGPT)
 - [ ] Revisão final do ChatGPT no pull request do GitHub, confirmando que o documento publicado corresponde a esta versão (ChatGPT e utilizador)
 - [ ] Aprovação final dos limiares, antes do Dia 1 (utilizador)
 - [ ] Criar conta de afiliado na Travelpayouts e obter o token (utilizador)

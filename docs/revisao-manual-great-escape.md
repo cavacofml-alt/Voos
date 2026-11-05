@@ -1,6 +1,6 @@
 # Revisão do Great Escape no computador — Instruções
 
-Nov 4, 2026 · @Zé Manel
+4 de Novembro de 2026 · @Zé Manel
 
 ## Objectivo
 
